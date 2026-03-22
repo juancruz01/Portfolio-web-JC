@@ -31,9 +31,30 @@ export const HeroSection = () => {
             <a href="#projects" className="px-8 py-4 bg-btn-primary text-brand-dark font-bold rounded-full hover:scale-105 transition-transform">
               Ver Proyectos
             </a>
-            <button className="px-8 py-4 border border-white/10 bg-white/5 backdrop-blur-sm rounded-full font-bold text-white hover:bg-white/10 transition-colors">
+            
+            <a
+              href="/CV_Juan_Cruz.pdf" // La ruta parte desde la carpeta public
+              download="CV_Juan_Cruz.pdf" // Esto fuerza la descarga con este nombre
+              className="px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-colors inline-flex items-center gap-2"
+            >
               Descargar CV
-            </button>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" x2="12" y1="15" y2="3" />
+              </svg>
+            </a>
+
           </div>
         </div>
 
