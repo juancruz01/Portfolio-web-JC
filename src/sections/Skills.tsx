@@ -21,7 +21,7 @@ export const Skills = () => {
         
             <SpotlightCard spotlightColor='59, 130, 246' className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-blue-500/50 transition-colors group">
               <h3 className="text-xl font-bold text-white mb-6">Front-End</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
              {/* Aquí irán tus tecnologías después */}
                 <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">React</span>
                 <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">TypeScript</span>
@@ -36,7 +36,7 @@ export const Skills = () => {
         {/* Contenedor 2: Back-End */}
         <SpotlightCard className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-blue-500/50 transition-colors group">
           <h3 className="text-xl font-bold text-white mb-6">Back-End</h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">.NET / C#</span>
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Python</span>
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Node</span>
@@ -48,7 +48,7 @@ export const Skills = () => {
         {/* Contenedor 3: Styles */}
         <SpotlightCard className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-blue-500/50 transition-colors group">
           <h3 className="text-xl font-bold text-white mb-6">Styles</h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Tailwind CSS</span>
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">CSS3</span>
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Sass</span>
@@ -60,7 +60,7 @@ export const Skills = () => {
         {/* Contenedor 4: Herramientas */}
         <SpotlightCard className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-blue-500/50 transition-colors group">
           <h3 className="text-xl font-bold text-white mb-6">Herramientas</h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Git / GitHub</span>
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Firebase</span>
              <span className="px-3 py-1 bg-white/5 rounded-md text-sm text-gray-400">Figma</span>

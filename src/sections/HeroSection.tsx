@@ -35,7 +35,7 @@ export const HeroSection = () => {
             <a
               href="/CV_Juan_Cruz.pdf" // La ruta parte desde la carpeta public
               download="CV_Juan_Cruz.pdf" // Esto fuerza la descarga con este nombre
-              className="px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-colors inline-flex items-center gap-2"
+              className="w-full md:w-auto px-8 py-3 rounded-full bg-black text-white border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:text-black active:scale-95"
             >
               Descargar CV
               <svg 
@@ -48,6 +48,7 @@ export const HeroSection = () => {
                 strokeWidth="2" 
                 strokeLinecap="round" 
                 strokeLinejoin="round"
+                className="shrink-0"
               >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />
