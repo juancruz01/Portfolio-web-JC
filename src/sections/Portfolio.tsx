@@ -4,7 +4,7 @@ import {projectsData} from "../data/projects";
 
 export const Portfolio = () => {
     return(
-        <section id="projects" className="py-20 px-6 md:px20 bg-black text-white flex flex-col items-center">
+        <section id="portfolio" className="py-20 px-6 md:px20 bg-black text-white flex flex-col items-center">
             {/* Titulo section */}
             <div className="w-full max-w[80%] mb-16 text-left">
                 <h2 className="text-3xl md:text-4xl font-mono font-bold">

@@ -12,7 +12,7 @@ export const Navbar = () => {
     { name: 'Sobre mí', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experiencia', href: '#experience' },
-    { name: 'Proyectos', href: '#projects' },
+    { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contacto', href: '#contact' },
   ];
 

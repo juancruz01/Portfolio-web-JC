@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* --- Estilos base para elementos --- */
 canvas {
   display: block;
@@ -34,7 +38,7 @@ canvas {
 .lustre-text {
   display: inline-block;
   font-weight: 800;
-  color: #4d5866;
+  color: #ffffff;
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 200% auto;
@@ -46,11 +50,11 @@ canvas {
 .lustre-dark {
   background-image: linear-gradient(
     90deg,
-    #4d5866 0%,
-    #6b7280 20%,
+    #8e96a3 0%,
+    #d1d5db 20%,
     #ffffff 50%,
-    #6b7280 80%,
-    #4d5866 100%
+    #d1d5db 80%,
+    #8e96a3 100%
   ) !important;
 }
 
