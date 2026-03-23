@@ -1,7 +1,8 @@
 import './App.css'
 import {Navbar} from './components/ui/Navbar';
 import {HeroSection} from './sections/HeroSection';
-import {About}from './sections/Aboutme';
+import {About} from './sections/Aboutme';
+import {Servicios} from './sections/Servicios';
 import {Skills} from './sections/Skills';
 import {Works} from './sections/Works';
 import {Portfolio} from './sections/Portfolio';
@@ -14,6 +15,7 @@ function App() {
       <main>
         <HeroSection />
         <About />
+        <Servicios />
         <Skills/>
         <Works />
         <Portfolio />

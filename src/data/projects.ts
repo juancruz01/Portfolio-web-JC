@@ -7,7 +7,7 @@ export const projectsData: Project[] = [
   {
     id: 1,
     title: "Pantu-wallet",
-    description: "Una billetera digital integral diseñada para gestionar transacciones en tiempo real, con un enfoque en la seguridad y una interfaz de usuario intuitiva.",
+    description: "Aplicación web desarrollada con React, TypeScript y Supabase que permite gestionar ingresos y gastos de forma eficiente. Incluye autenticación de usuarios, almacenamiento en la nube y una interfaz intuitiva.",
     technologies: ["React", "Javascript", "Tailwind", "Supabase"],
     image: imgPantu,
     github:"https://github.com/juancruz01/Pantu-Wallet",

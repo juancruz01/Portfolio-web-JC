@@ -36,7 +36,7 @@ export const About = () => {
                             Hola, soy <span className="text-white font-semibold">Juan Cruz</span>, un apasionado desarrollador de 24 años que vive en Buenos Aires. Actualmente estoy cursando la Tecnicatura en Programación, lo que me permite combinar fundamentos sólidos con las últimas tecnologías del mercado.
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed">
-                            Me especializo en el desarrollo <span className="text-blue-400">Fullstack</span>, con un enfoque particular en crear experiencias digitales fluidas y eficientes. Mi stack principal incluye tecnologías como React, TypeScript, .NET y Python.
+                            Actualmente sigo formándome y desarrollando proyectos propios, aplicando buenas prácticas, de desarrollo y optimizacion web. Busco oportunidades tanto freelance como en empresas donde pueda aportar valor y seguir creciendo profesionalmente.
                         </p>
                 
                         {/* Datos rápidos - También limitados por el contenedor padre */}

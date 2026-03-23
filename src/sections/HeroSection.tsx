@@ -19,12 +19,12 @@ export const HeroSection = () => {
         <div className="relative z-20 text-center px-4">
           <h1 className="text-5xl md:text-8xl tracking-tighter leading-tight">
             <LustreText 
-              text="JUAN CRUZ" 
+              text="Desarrollador de Software" 
               className="lustre-dark" 
             />
           </h1>
           <p className="mt-4 text-gray-400 text-lg md:text-xl font-medium tracking-widest uppercase">
-            Desarrollador de Software
+            especializado en React, Next.js y Typescript
           </p>
           
           <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
