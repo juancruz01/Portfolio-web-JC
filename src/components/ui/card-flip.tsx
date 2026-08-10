@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { Info, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
@@ -14,6 +14,33 @@ function CardFlip({
   const [isFlipped, setIsFlipped] = useState(false);
   const [front, back] = React.Children.toArray(children);
 
+  // Medimos la altura real de cada cara para que el contenedor se ajuste
+  // a la que esté visible, en vez de heredar siempre la altura del frente
+  // (eso hacía que un dorso más largo se desbordara y tapara la card de abajo).
+  const frontRef = useRef<HTMLDivElement>(null);
+  const backRef = useRef<HTMLDivElement>(null);
+  const [heights, setHeights] = useState<{ front?: number; back?: number }>({});
+
+  useLayoutEffect(() => {
+    const frontEl = frontRef.current;
+    const backEl = backRef.current;
+
+    const measure = () => {
+      setHeights({
+        front: frontEl?.offsetHeight,
+        back: backEl?.offsetHeight,
+      });
+    };
+
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    if (frontEl) observer.observe(frontEl);
+    if (backEl) observer.observe(backEl);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
       className={cn('relative w-full', className)}
@@ -23,12 +50,16 @@ function CardFlip({
       <motion.div
         className='relative w-full'
         initial={false}
-        animate={{ rotateY: isFlipped ? -180 : 0 }}
+        animate={{
+          rotateY: isFlipped ? -180 : 0,
+          height: (isFlipped ? heights.back : heights.front) ?? 'auto',
+        }}
         transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         style={{ transformStyle: 'preserve-3d' }}
       >
         <div
-          className='w-full'
+          ref={frontRef}
+          className='absolute top-0 left-0 w-full'
           style={{
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
@@ -53,7 +84,8 @@ function CardFlip({
         </div>
 
         <div
-          className='absolute inset-0 w-full'
+          ref={backRef}
+          className='absolute top-0 left-0 w-full'
           style={{
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
