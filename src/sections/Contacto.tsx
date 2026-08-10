@@ -75,13 +75,13 @@ export const Contacto = () => {
 
           {/* Botones Redes Sociales */}
           <div className="flex gap-4 pt-4">
-            <a href="https://github.com/juancruz01" target='blank_' className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white hover:text-black transition-all duration-300">
+            <a href="https://github.com/juancruz01" target='_blank' rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white hover:text-black transition-all duration-300">
               <Github size={24} />
             </a>
-            <a href="www.linkedin.com/in/juan-cruz-carisimo-bb106b231" target='blank_' className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white hover:text-black transition-all duration-300">
+            <a href="https://www.linkedin.com/in/juan-cruz-carisimo-bb106b231" target='_blank' rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white hover:text-black transition-all duration-300">
               <Linkedin size={24} />
             </a>
-            <a href="https://www.tiktok.com/@jxwebdesign" target='blank_' className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white hover:text-black transition-all duration-300">
+            <a href="https://www.tiktok.com/@jxwebdesign" target='_blank' rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white hover:text-black transition-all duration-300">
               <MessageCircle size={24} />
             </a>
           </div>

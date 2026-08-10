@@ -28,7 +28,7 @@ export const HeroSection = () => {
           </p>
           
           <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#projects" className="px-8 py-4 bg-btn-primary text-brand-dark font-bold rounded-full hover:scale-105 transition-transform">
+            <a href="#portfolio" className="px-8 py-4 bg-btn-primary text-brand-dark font-bold rounded-full hover:scale-105 transition-transform">
               Ver Proyectos
             </a>
             

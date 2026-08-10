@@ -4,9 +4,9 @@ import {projectsData} from "../data/projects";
 
 export const Portfolio = () => {
     return(
-        <section id="portfolio" className="py-20 px-6 md:px20 bg-black text-white flex flex-col items-center">
+        <section id="portfolio" className="py-20 px-6 md:px-20 bg-black text-white flex flex-col items-center">
             {/* Titulo section */}
-            <div className="w-full max-w[80%] mb-16 text-left">
+            <div className="w-full max-w-[80%] mb-16 text-left">
                 <h2 className="text-3xl md:text-4xl font-mono font-bold">
                     <span className="text-blue-400">{'{'}</span>
                     <span className="text-gray-500">/*</span>
@@ -16,7 +16,7 @@ export const Portfolio = () => {
                 </h2>
             </div>
 
-            <div className="w-full max-w[80%] space-y-20">
+            <div className="w-full max-w-[80%] space-y-20">
                 {projectsData.map((proyecto, index) => (
                     <React.Fragment key={proyecto.id}>
                         <div className="flex flex-col md:flex-row gap-10 items-center">
@@ -49,7 +49,7 @@ export const Portfolio = () => {
                                         proyecto.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="px-4 py-1.5 bg-[#1a1a1a] text-white border-2 border-white rounded-full text-xs transtion-all duration-300 hover:bg-white hover:text-black cursor-default"
+                                                className="px-4 py-1.5 bg-[#1a1a1a] text-white border-2 border-white rounded-full text-xs transition-all duration-300 hover:bg-white hover:text-black cursor-default"
                                             >
                                                 {tech}
                                             </span>

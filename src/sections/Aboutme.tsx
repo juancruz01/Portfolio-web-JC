@@ -33,7 +33,7 @@ export const About = () => {
                     {/* Contenedor interno limitado al 50% y alineado a la izquierda */}
                     <div className="max-w-full md:max-w-[50%] space-y-6">
                         <p className="text-gray-400 text-lg leading-relaxed">
-                            Hola, soy <span className="text-white font-semibold">Juan Cruz</span>, un apasionado desarrollador de 24 años que vive en Buenos Aires. Actualmente estoy cursando la Tecnicatura en Programación, lo que me permite combinar fundamentos sólidos con las últimas tecnologías del mercado.
+                            Hola, soy <span className="text-white font-semibold">Juan Cruz</span>, un apasionado desarrollador de 25 años que vive en Buenos Aires. Actualmente estoy cursando la Tecnicatura en Programación, lo que me permite combinar fundamentos sólidos con las últimas tecnologías del mercado.
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed">
                             Actualmente sigo formándome y desarrollando proyectos propios, aplicando buenas prácticas, de desarrollo y optimizacion web. Busco oportunidades tanto freelance como en empresas donde pueda aportar valor y seguir creciendo profesionalmente.
