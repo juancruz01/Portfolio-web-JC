@@ -18,12 +18,12 @@ export const Works = () => {
                 {/* FRENTE DE LA CARD */}
                     <CardFlipFront className="border-white/10 bg-white/5 backdrop-blur-sm p-2">
                         <CardFlipHeader>
-                        <div className="flex justify-between items-start">
+                        <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-1 sm:gap-4 pr-10 min-w-0">
                             <div>
                             <CardFlipTitle className="text-2xl text-white">Desarrollador Full Stack</CardFlipTitle>
                             <CardFlipDescription className="text-blue-400 font-medium">Distribuidora Marini (Freelance / Contractor)</CardFlipDescription>
                             </div>
-                            <span className="text-xs text-gray-500 font-mono">Jun 2024 - Presente</span>
+                            <span className="text-xs text-gray-500 font-mono sm:shrink-0">Jun 2024 - Presente</span>
                         </div>
                         </CardFlipHeader>
                         <CardFlipContent>
@@ -61,19 +61,19 @@ export const Works = () => {
                 {/* FRENTE DE LA CARD */}
                     <CardFlipFront className="border-white/10 bg-white/5 backdrop-blur-sm p-2">
                         <CardFlipHeader>
-                        <div className="flex justify-between items-start">
+                        <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-1 sm:gap-4 pr-10 min-w-0">
                             <div>
                             <CardFlipTitle className="text-2xl text-white">Python Developer</CardFlipTitle>
                             <CardFlipDescription className="text-blue-400 font-medium">Cognition</CardFlipDescription>
                             </div>
-                            <span className="text-xs text-gray-500 font-mono">Jun 2025 - Ago 2025</span>
+                            <span className="text-xs text-gray-500 font-mono sm:shrink-0">Jun 2025 - Ago 2025</span>
                         </div>
                         </CardFlipHeader>
                         <CardFlipContent>
                         <p className="text-gray-400 text-sm">
                             Desarrollo de soluciones inteligentes para la gestión de entornos costeros.
                         </p>
-                        <div className="flex gap-2 mt-4">
+                        <div className="flex gap-2 mt-4 flex-wrap">
                             <span className="text-[10px] px-2 py-1 bg-white/10 rounded text-gray-300">Python</span>
                             <span className="text-[10px] px-2 py-1 bg-white/10 rounded text-gray-300">Flask</span>
                             <span className="text-[10px] px-2 py-1 bg-white/10 rounded text-gray-300">SQL</span>

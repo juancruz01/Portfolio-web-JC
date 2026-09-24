@@ -51,7 +51,7 @@ export const Navbar = () => {
                 <DropdownMenuItem key={link.name} asChild>
                   <a 
                     href={link.href} 
-                    className="w-full h-full px-4 py-2 hover:text-blue-400 transition-colors font-bold"
+                    className="w-full h-full px-4 py-2 text-white hover:text-blue-400 transition-colors font-bold"
                   >
                     {link.name}
                   </a>

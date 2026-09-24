@@ -63,7 +63,13 @@ function CardFlip({
           style={{
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
-            transformStyle: 'preserve-3d',
+            // Safari entrega los toques a la cara oculta aunque no se vea,
+            // así que solo la cara visible puede recibir eventos.
+            pointerEvents: isFlipped ? 'none' : 'auto',
+            // Ocultamos la cara que queda de espaldas a mitad del giro (0.3s de 0.6s),
+            // por si el navegador no respeta backface-visibility.
+            visibility: isFlipped ? 'hidden' : 'visible',
+            transition: 'visibility 0s linear 0.3s',
           }}
         >
           <div className='relative w-full'>
@@ -90,7 +96,9 @@ function CardFlip({
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
             transform: 'rotateY(-180deg)',
-            transformStyle: 'preserve-3d',
+            pointerEvents: isFlipped ? 'auto' : 'none',
+            visibility: isFlipped ? 'visible' : 'hidden',
+            transition: 'visibility 0s linear 0.3s',
           }}
         >
           <div className='relative w-full h-full'>

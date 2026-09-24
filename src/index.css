@@ -18,6 +18,13 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+/* Fondo negro para que el "rebote" del scroll en iOS/Android no muestre blanco */
+html,
+body {
+  background-color: #000;
 }
 
 /* --- Estilos base para elementos --- */

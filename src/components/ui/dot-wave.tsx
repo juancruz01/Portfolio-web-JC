@@ -43,8 +43,10 @@ export function DotWave({
     const state = stateRef.current;
     state.startTime = Date.now();
 
+    // Tomamos el tamaño del contenedor (no de la ventana) para que el canvas
+    // acompañe al hero cuando crece en pantallas bajas o cambian las barras del navegador.
     const handleResize = () => {
-      state.windowSize = { w: window.innerWidth, h: window.innerHeight };
+      state.windowSize = { w: canvas.clientWidth, h: canvas.clientHeight };
       canvas.width = state.windowSize.w;
       canvas.height = state.windowSize.h;
     };
@@ -96,11 +98,12 @@ export function DotWave({
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(canvas);
     draw();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      observer.disconnect();
       cancelAnimationFrame(state.animationId);
     };
   }, [dotGap, dotRadiusMax, expansionSpeed, repeatAnimation, lightIntensity, bgColor, dotColor]);
@@ -109,7 +112,7 @@ export function DotWave({
   <div className={cn('relative w-full h-full bg-black', className)}>
     <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
     {children && (
-      <div className='relative z-10 w-full h-full flex items-center justify-center'>
+      <div className='relative z-10 w-full h-full min-h-[inherit] flex items-center justify-center'>
         {children}
       </div>
     )}

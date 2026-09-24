@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="w-full h-screen overflow-hidden">
+    <section id="home" className="w-full min-h-svh flex overflow-hidden">
       {/* El componente oficial ya maneja la animación de fondo */}
       <DotWave 
         dotGap={30} 
@@ -14,11 +14,12 @@ export const HeroSection = () => {
         lightIntensity={0.7}  
         bgColor='#000000'
         dotColor='#ffffff'
-        className='w-full h-full'
+        className='w-full min-h-svh'
       >
-        <div className="relative z-20 text-center px-4">
-          <h1 className="text-5xl md:text-8xl tracking-tighter leading-tight">
-            <LustreText 
+        {/* pt deja lugar al navbar fijo y pb al indicador de scroll */}
+        <div className="relative z-20 text-center px-4 pt-28 pb-32 [@media(max-height:500px)]:pb-12">
+          <h1 className="text-4xl min-[400px]:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-tight">
+            <LustreText
               text="Desarrollador de Software" 
               className="lustre-dark" 
             />
@@ -59,7 +60,8 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className='absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer'>
+        {/* En pantallas muy bajas (celular horizontal) se oculta para no tapar los botones */}
+        <div className='absolute bottom-10 left-1/2 -translate-x-1/2 [@media(max-height:500px)]:hidden flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer'>
             <span className='text-[18px] tracking-[0.3em] font-bold text-white uppercase'>
                 Scroll
             </span>
